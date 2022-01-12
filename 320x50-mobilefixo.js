@@ -29,14 +29,14 @@ var sizes = [
                 siteId: "404604",
                 zoneId: "2266404"
             }
-        },*/{
+        }/*,{
               bidder: 'seedtag',
               params: {
                 publisherId: "4680-0330-01",
                 adUnitId: "19038154",
                 placement: "inScreen"
             }
-        }
+        }*/
         ]
 }];
 
@@ -65,7 +65,7 @@ pbjs.que.push(function() {
                 });
 });     
 
-var passbackTagHtml="";
+/*var passbackTagHtml="";
 passbackTagHtml += "<script async src=\"https:\/\/securepubads.g.doubleclick.net\/tag\/js\/gpt.js\"><\/script>";
 passbackTagHtml += "<div id=\"gpt-passback\">";
 passbackTagHtml += "<script>";
@@ -77,5 +77,20 @@ passbackTagHtml += "googletag.enableServices();";
 passbackTagHtml += "googletag.display('gpt-passback');";
 passbackTagHtml += "});";
 passbackTagHtml += "<\/script>";
-passbackTagHtml += "<\/div>";
+passbackTagHtml += "<\/div>";*/
 
+var passbackTagHtml="";
+passbackTagHtml += "<script type=\"text\/javascript\">window._seedtagq = window._seedtagq || [];";
+passbackTagHtml += "window._seedtagq.push(['_setId', '4680-0330-01']);";
+passbackTagHtml += "(function () {";
+passbackTagHtml += "  var st = document.createElement('script');";
+passbackTagHtml += "  st.type = 'text\/javascript';";
+passbackTagHtml += "  st.async = true;";
+passbackTagHtml += "  st.src = ('https:' == document.location.protocol";
+passbackTagHtml += "    ? 'https'";
+passbackTagHtml += "    : 'http') + ':\/\/config.seedtag.com\/loader.js?v=' + Math.random();";
+passbackTagHtml += "  var s = document.getElementsByTagName('script')[0];";
+passbackTagHtml += "  s.parentNode.insertBefore(st, s);";
+passbackTagHtml += "})();";
+passbackTagHtml += "<\/script>";
+passbackTagHtml += "<script src=\"https:\/\/creatives.seedtag.com\/dfp\/st-passback.js?inScreen\"><\/script>";
