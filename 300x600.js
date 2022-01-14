@@ -65,6 +65,7 @@ passbackTagHtml += "<script>";
 passbackTagHtml += "window.googletag = window.googletag || {cmd: []};";
 passbackTagHtml += "googletag.cmd.push(function() {";
 passbackTagHtml += "googletag.defineSlot('\/7542\/TESTE\/prebid_passback', [[300, 600]], 'gpt-passback').addService(googletag.pubads());";
+passbackTagHtml += "googletag.pubads().enableSingleRequest();";
 passbackTagHtml += "googletag.enableServices();";
 passbackTagHtml += "googletag.display('gpt-passback');";
 passbackTagHtml += "});";
