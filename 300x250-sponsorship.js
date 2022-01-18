@@ -13,8 +13,8 @@ var sizes = [
             {
               bidder: 'teads',
               params: {
-                pageId: "141988",
-                placementId: "156092"
+                pageId: "138995",
+                placementId: "156240"
             }
         },{
               bidder: 'appnexus',
