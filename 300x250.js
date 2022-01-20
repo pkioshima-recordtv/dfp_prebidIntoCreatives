@@ -16,12 +16,12 @@ var sizes = [
                 pageId: "138995",
                 placementId: "156239"
             }
-        },/*{
+        },{
               bidder: 'appnexus',
               params: {
                 placementId: "23560609"
             }
-        },*/{
+        },{
               bidder: 'onemobile',
               params: {
                 dcn: "8a96905a017e7e78c12c7934ff0e0017",
