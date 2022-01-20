@@ -16,12 +16,12 @@ var sizes = [
                 pageId: "138995",
                 placementId: "156240"
             }
-        },/*{
+        },{
               bidder: 'appnexus',
               params: {
                 placementId: "23972503"
             }
-        },*/{
+        },{
               bidder: 'smartadserver',
               params: {
                 siteId: "297790",
@@ -34,6 +34,12 @@ var sizes = [
                 accountId: "15284",
                 siteId: "406242",
                 zoneId: "2278888"
+            }
+        },{
+              bidder: 'onemobile',
+              params: {
+                dcn: "8a96982a017e7e7945e2795155b20001",
+                pos: "8a969dde017e7e78bbe77951dfee000e"
             }
         }
         ]
