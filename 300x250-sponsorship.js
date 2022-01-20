@@ -16,12 +16,12 @@ var sizes = [
                 pageId: "138995",
                 placementId: "156240"
             }
-        },{
+        },/*{
               bidder: 'appnexus',
               params: {
                 placementId: "23972503"
             }
-        },{
+        },*/{
               bidder: 'smartadserver',
               params: {
                 siteId: "297790",
