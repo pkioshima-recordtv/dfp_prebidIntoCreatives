@@ -22,6 +22,12 @@ var sizes = [
                 placementId: "23560609"
             }
         },*/{
+              bidder: 'onemobile',
+              params: {
+                dcn: "8a96905a017e7e78c12c7934ff0e0017",
+                pos: "8a969551017e7e78c5ff793602f0001a"
+            }
+        },{
               bidder: 'smartadserver',
               params: {
                 siteId: "297790",
