@@ -29,6 +29,12 @@ var sizes = [
                 siteId: "406242",
                 zoneId: "2278888"
             }
+        },{
+              bidder: 'onemobile',
+              params: {
+                dcn: "8a96982a017e7e7945e2795155b20001",
+                pos: "8a969186017e7e794afc7954c5f50003"
+            }
         }
         ]
 }];
