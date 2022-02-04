@@ -9,6 +9,14 @@ var sizes = [
                     sizes: sizes
                 }
             },
+
+            /* -- Floor Price Beginning -- */
+            floors: {
+                currency: "BRL",
+                default: 4.00
+            },
+            /* -- Floor Price End-- */
+            
             bids: [
             {
               bidder: 'appnexus',
