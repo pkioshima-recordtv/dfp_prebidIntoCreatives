@@ -9,6 +9,12 @@ var sizes = [
                     sizes: sizes
                 }
             },
+            /* -- Floor Price -- */
+            floors: {
+                currency: "BRL",
+                default: 4.00
+            },
+
             bids: [
             {
               bidder: 'teads',
@@ -68,13 +74,6 @@ pbjs.que.push(function() {
                         }
                     }
                 });
-});
-
-pbjs.setConfig({
-    floors: {
-        currency: "BRL",
-        default: 4.00
-    }
 });
 
 
