@@ -68,7 +68,15 @@ pbjs.que.push(function() {
                         }
                     }
                 });
-});     
+});
+
+pbjs.setConfig({
+    floors: {
+        currency: "BRL",
+        default: 4.00
+    }
+});
+
 
 var passbackTagHtml="";
 passbackTagHtml += "<script async src=\"https:\/\/securepubads.g.doubleclick.net\/tag\/js\/gpt.js\"><\/script>";
