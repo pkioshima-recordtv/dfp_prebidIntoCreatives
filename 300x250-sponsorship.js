@@ -17,13 +17,13 @@ var sizes = [
             /* -- Floor Price End-- */
 
             bids: [
-            {
+            /*{
               bidder: 'teads',
               params: {
                 pageId: "138995",
                 placementId: "156240"
             }
-        },{
+        },*/{
               bidder: 'appnexus',
               params: {
                 placementId: "23972503"
