@@ -10,13 +10,13 @@ var sizes = [
                 }
             },
             bids: [
-            {
+            /*{
               bidder: 'teads',
               params: {
                 pageId: "138995",
                 placementId: "156239"
             }
-        },{
+        },*/{
               bidder: 'appnexus',
               params: {
                 placementId: "23560609"
