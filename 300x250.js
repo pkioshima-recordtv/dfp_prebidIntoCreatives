@@ -3,7 +3,7 @@ var sizes = [
         ];
         var PREBID_TIMEOUT = 2300;            
         var adUnits = [{
-            code: 'postbid_iframe',
+            code: 'r7adunit',
             mediaTypes: {
                 banner: {
                     sizes: sizes
@@ -22,7 +22,7 @@ var sizes = [
                 placementId: "23560609"
             }
         },{
-              bidder: 'onemobile',
+              bidder: 'yahoossp',
               params: {
                 dcn: "8a96905a017e7e78c12c7934ff0e0017",
                 pos: "8a969551017e7e78c5ff793602f0001a"
@@ -48,14 +48,22 @@ var sizes = [
 var pbjs = pbjs || {};
 pbjs.que = pbjs.que || [];
 
+pbjs.setConfig({
+userSync: {
+    userIds: [{
+        name: "criteo",
+    }]
+}
+});
+
 pbjs.que.push(function() {
     pbjs.addAdUnits(adUnits);
     pbjs.requestBids({
         timeout: PREBID_TIMEOUT,
         bidsBackHandler: function() {
-            var iframe = document.getElementById('postbid_iframe');
+            var iframe = document.getElementById('r7adunit');
             var iframeDoc = iframe.contentWindow.document;
-            var adServerTargeting = pbjs.getAdserverTargetingForAdUnitCode('postbid_iframe');
+            var adServerTargeting = pbjs.getAdserverTargetingForAdUnitCode('r7adunit');
 
                         // If any bidders return any creatives
                         if (adServerTargeting && adServerTargeting['hb_adid']) {
