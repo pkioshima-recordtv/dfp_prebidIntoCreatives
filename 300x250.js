@@ -3,7 +3,7 @@ var sizes = [
         ];
         var PREBID_TIMEOUT = 2300;            
         var adUnits = [{
-            code: 'postbid_iframe',
+            code: 'r7adunit',
             mediaTypes: {
                 banner: {
                     sizes: sizes
@@ -62,14 +62,15 @@ userSync: {
 }
 });
 
+
 pbjs.que.push(function() {
     pbjs.addAdUnits(adUnits);
     pbjs.requestBids({
         timeout: PREBID_TIMEOUT,
         bidsBackHandler: function() {
-            var iframe = document.getElementById('postbid_iframe');
+            var iframe = document.getElementById('r7adunit');
             var iframeDoc = iframe.contentWindow.document;
-            var adServerTargeting = pbjs.getAdserverTargetingForAdUnitCode('postbid_iframe');
+            var adServerTargeting = pbjs.getAdserverTargetingForAdUnitCode('r7adunit');
 
                         // If any bidders return any creatives
                         if (adServerTargeting && adServerTargeting['hb_adid']) {
@@ -82,7 +83,7 @@ pbjs.que.push(function() {
                         }
                     }
                 });
-}); 
+});     
 
 var passbackTagHtml="";
 passbackTagHtml += "<script async src=\"https:\/\/securepubads.g.doubleclick.net\/tag\/js\/gpt.js\"><\/script>";
