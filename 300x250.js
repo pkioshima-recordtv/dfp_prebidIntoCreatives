@@ -48,6 +48,7 @@ var sizes = [
 var pbjs = pbjs || {};
 pbjs.que = pbjs.que || [];
 
+/*
 pbjs.setConfig({
 userSync: {
     filterSettings: {
@@ -61,6 +62,7 @@ userSync: {
     }]
 }
 });
+*/
 
 
 pbjs.que.push(function() {
