@@ -55,6 +55,20 @@ var sizes = [
 var pbjs = pbjs || {};
 pbjs.que = pbjs.que || [];
 
+pbjs.setConfig({
+userSync: {
+    filterSettings: {
+            iframe: {
+                bidders: '*',   // '*' means all bidders
+                filter: 'include'
+            }
+        },
+    userIds: [{
+        name: "criteo",
+    }]
+}
+});
+
 pbjs.que.push(function() {
     pbjs.addAdUnits(adUnits);
     pbjs.requestBids({
