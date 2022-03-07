@@ -3,7 +3,7 @@ var sizes = [
         ];
         var PREBID_TIMEOUT = 2300;            
         var adUnits = [{
-            code: 'r7adunit',
+            code: 'postbid_iframe',
             mediaTypes: {
                 banner: {
                     sizes: sizes
@@ -70,9 +70,9 @@ pbjs.que.push(function() {
     pbjs.requestBids({
         timeout: PREBID_TIMEOUT,
         bidsBackHandler: function() {
-            var iframe = document.getElementById('r7adunit');
+            var iframe = document.getElementById('postbid_iframe');
             var iframeDoc = iframe.contentWindow.document;
-            var adServerTargeting = pbjs.getAdserverTargetingForAdUnitCode('r7adunit');
+            var adServerTargeting = pbjs.getAdserverTargetingForAdUnitCode('postbid_iframe');
 
                         // If any bidders return any creatives
                         if (adServerTargeting && adServerTargeting['hb_adid']) {
