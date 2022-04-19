@@ -1,72 +1,3 @@
-var words = /xxxxx|cancer|morte|guerra/; // Lista de palavras consideradas como HardNews.
-
-var bodytext = document.body.innerText.toLowerCase().replace(/[.,\s]/g, ' '); // Coleta de strings da page convertendo em Lower Case e substituindo as quebras de linhas por espaço.
-
-var bodytext = bodytext.replace(/[àáâãäå]/g,"a"); // Remocao de caracteres especiais.
-var bodytext = bodytext.replace(/[éèêë]/g,"e"); // Remocao de caracteres especiais.
-var bodytext = bodytext.replace(/[íì]/g,"i"); // Remocao de caracteres especiais.
-var bodytext = bodytext.replace(/[õôö]/g,"o"); // Remocao de caracteres especiais.
-var bodytext = bodytext.replace(/[ç]/g,"c"); // Remocao de caracteres especiais.
-
-/* Verificacao da lista  e strings da pagina e criacao e atribuicao de valor na var hardnews*/
-if(words.test(bodytext)){
-	var hardnews = "1"
-}else{
-	var hardnews = "0"
-}
-
-/* Tag do Google para gerar a key-value, hardnews, junto com a funcao para servir no Head */
-(function() {
-var s = document.createElement('script');
-s.innerHTML = 'googletag.cmd.push(function() { googletag.pubads().setTargeting("hardnews",hardnews); });';
-document.head.appendChild(s);
-})();
-
-
-// -----------------------------
-
-var bodytext = document.body.innerText;
-
-var bodytext = bodytext.toLowerCase().replace(/[.,\s]/g, ' ');
-var bodytext = bodytext.replace(/[àáâãäå]/g,"a");
-var bodytext = bodytext.replace(/[éèêë]/g,"e");
-var bodytext = bodytext.replace(/[íì]/g,"i");
-var bodytext = bodytext.replace(/[õôö]/g,"o");
-var bodytext = bodytext.replace(/[úùü]/g,"u");
-var bodytext = bodytext.replace(/[ç]/g,"c");
-
-
-// -----------------------------
-
-var words = / pf | revolver | homicidio | culposo /;
-
-var bodytext = " " + document.querySelector('meta[name="twitter:title"]').content;
-var bodytext = bodytext + " " + document.querySelector('meta[name="twitter:description"]').content + " ";
-
-var bodytext = bodytext.toLowerCase().replace(/[.,\s]/g, ' ');
-var bodytext = bodytext.replace(/'/g,'');
-var bodytext = bodytext.replace(/[àáâãäå]/g,"a");
-var bodytext = bodytext.replace(/[éèêë]/g,"e");
-var bodytext = bodytext.replace(/[íì]/g,"i");
-var bodytext = bodytext.replace(/[õôö]/g,"o");
-var bodytext = bodytext.replace(/[úùü]/g,"u");
-var bodytext = bodytext.replace(/[ç]/g,"c");
-
-if(words.test(bodytext)){
-		var hardnews = "1"
-	}else{
-		var hardnews = "0"
-	}
-  	  (function() {
-	    var s = document.createElement('script');
-	    s.innerHTML = 'googletag.cmd.push(function() { googletag.pubads().setTargeting("hardnews",hardnews); });';
-	    document.head.appendChild(s);
-	  })();
-
-
-// -----
-
-
 var sizes = [
         [300, 250]
         ];
@@ -176,5 +107,3 @@ passbackTagHtml += "googletag.display('gpt-passback');";
 passbackTagHtml += "});";
 passbackTagHtml += "<\/script>";
 passbackTagHtml += "<\/div>";
-
-
