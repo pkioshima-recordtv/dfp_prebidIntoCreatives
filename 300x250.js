@@ -1,5 +1,5 @@
 var sizes = [
-        [300, 250]
+        [300, 250], [300, 100], [300, 50], [250, 250]
         ];
         var PREBID_TIMEOUT = 2300;            
         var adUnits = [{
