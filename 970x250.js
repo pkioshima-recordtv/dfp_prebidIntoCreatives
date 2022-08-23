@@ -1,5 +1,5 @@
 var sizes = [
-        [970, 250], [970, 90], [728, 90], [300, 250], [300, 100], [320, 100]
+        [970, 250], [970, 90], [728, 90], [300, 250]
         ];
         var PREBID_TIMEOUT = 2300;            
         var adUnits = [{
@@ -11,6 +11,12 @@ var sizes = [
             },
             bids: [
             {
+              bidder: 'teads',
+              params: {
+                pageId: "138995",
+                placementId: "156239"
+            }
+        },{
               bidder: 'appnexus',
               params: {
                 placementId: "23560609"
