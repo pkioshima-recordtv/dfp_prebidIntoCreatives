@@ -51,7 +51,7 @@ var sizes = [
 var pbjs = pbjs || {};
 pbjs.que = pbjs.que || [];
 
-pbjs.setConfig({
+/*pbjs.setConfig({
 userSync: {
     filterSettings: {
             iframe: {
@@ -63,7 +63,7 @@ userSync: {
         name: "criteo",
     }]
 }
-});
+});*/
 
 pbjs.que.push(function() {
     pbjs.addAdUnits(adUnits);
